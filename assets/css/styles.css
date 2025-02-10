@@ -1,0 +1,74 @@
+@import url('root.css');
+
+main, header, footer {
+    width: 60%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 0 100px;
+    height: 70vh;
+}
+
+/* ------------------------------------ */
+
+.header {
+    background-color: blue;
+    overflow: auto;
+    padding: 15px;
+}
+
+.logo {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    float: left;
+}
+
+.navegador {
+    float: right;
+}
+
+.li-nav {
+    display: inline-block;
+}
+
+/* ------------------------------ */
+
+.jumbotron {
+    background-color: red;  
+}
+
+h1 {
+    width: 35%;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+.jumbotron a {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.dislexia {
+    background-color: green;    
+}
+
+.Discalculo {
+    background-color: violet;    
+}
+
+.TDAH {
+    background-color: yellow;    
+}
+
+.recursos {
+    background-color: aqua;
+    height: 30vh;
+}
+
+.trucos {
+    background-color: chocolate;
+    height: 30vh;
+}
