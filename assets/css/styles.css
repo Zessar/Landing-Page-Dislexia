@@ -1,28 +1,39 @@
 @import url('root.css');
 
-main, header, footer {
+.width-margin-auto {
     width: 60%;
     margin: 0 auto;
 }
 
+.padding-centrado {
+    padding: 15px 25%;
+}
+
 section {
-    padding: 0 100px;
-    height: 70vh;
+    height: 810px;
+}
+
+.color {
+    color: white;
 }
 
 /* ------------------------------------ */
 
 .header {
-    background-color: blue;
+    background-color: rgb(161, 195, 73);
+    width: 100%;
     overflow: auto;
-    padding: 15px;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
-    width: 25px;
-    height: 25px;
-    background-color: white;
+    color: white;
+    font-weight: bolder;
     float: left;
+    padding: 3px;
 }
 
 .navegador {
@@ -30,34 +41,358 @@ section {
 }
 
 .li-nav {
+    padding: 0 5px;
     display: inline-block;
+}
+
+.scale {
+    transition: transform 1s ease-in-out;
+}
+
+.scale:hover {
+    transform: scale(1.2);
+}
+
+.contacto {
+    background-color: white;
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-weight: bold;
+    color: rgb(161, 195, 73);
+    transition: background-color 1s ease-in-out; /* Suaviza la transición */
+    border: 1px solid white;
+}
+
+.btn-contacto:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: 1px solid white;
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.6);
 }
 
 /* ------------------------------ */
 
 .jumbotron {
-    background-color: red;  
+    background-image: url(../img/jumbotron.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 58px;
+}
+
+.jumbotron::before {
+    content: '';
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 680px;
+    left: 0;
+    clip-path: polygon(100% 100%, 0% 100% , 0.00% 39.25%, 1.67% 42.29%, 3.33% 45.58%, 5.00% 49.06%, 6.67% 52.69%, 8.33% 56.42%, 10.00% 60.21%, 11.67% 64.00%, 13.33% 67.74%, 15.00% 71.39%, 16.67% 74.89%, 18.33% 78.20%, 20.00% 81.28%, 21.67% 84.07%, 23.33% 86.56%, 25.00% 88.70%, 26.67% 90.46%, 28.33% 91.83%, 30.00% 92.78%, 31.67% 93.30%, 33.33% 93.39%, 35.00% 93.04%, 36.67% 92.25%, 38.33% 91.05%, 40.00% 89.44%, 41.67% 87.44%, 43.33% 85.09%, 45.00% 82.41%, 46.67% 79.44%, 48.33% 76.22%, 50.00% 72.79%, 51.67% 69.19%, 53.33% 65.48%, 55.00% 61.71%, 56.67% 57.91%, 58.33% 54.15%, 60.00% 50.47%, 61.67% 46.93%, 63.33% 43.56%, 65.00% 40.42%, 66.67% 37.54%, 68.33% 34.96%, 70.00% 32.73%, 71.67% 30.86%, 73.33% 29.38%, 75.00% 28.32%, 76.67% 27.68%, 78.33% 27.47%, 80.00% 27.70%, 81.67% 28.37%, 83.33% 29.46%, 85.00% 30.96%, 86.67% 32.85%, 88.33% 35.11%, 90.00% 37.70%, 91.67% 40.60%, 93.33% 43.76%, 95.00% 47.14%, 96.67% 50.69%, 98.33% 54.38%, 100.00% 58.14%);
+    background-color: rgb(240, 240, 240);
+}
+
+.ajustar {
+    padding: 0 50px;
+    width: 100%;
+    height: 100%;
+    position: relative; 
 }
 
 h1 {
-    width: 35%;
+    position: absolute;
+    top: 45px;
+    font-size: 80px;
+    font-weight: bold;
+    color: rgba(255, 255, 255);
+    line-height: 80px;
+    text-shadow: 5px 2px 1px rgb(161, 195, 73),
+    8px 5px 10px rgb(0, 0, 0, 0.5);
+}
+
+.text-recuadro {
+    width: 490px;
+    background-color: rgb(247, 247, 247);
+    padding: 25px 20px 40px 30px;
     font-size: 50px;
     font-weight: bold;
-    line-height: 1.4em;
+    line-height: 60px;
+    top: 200px;
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    color: rgb(161, 195, 73);
+    clip-path: polygon(1% 8%, 100% 0%, 94% 80%, 4% 91%);
 }
 
-.jumbotron a {
-    width: 100px;
+.recuadro-h2 {
+    position: absolute;
+    width: 500px;
+    height: 235px;
+    top: 230px;
+    left: 60px;
+    background-color: rgb(161, 195, 73);
+    clip-path: polygon(1% 8%, 100% 0%, 94% 80%, 4% 91%);
+}
+
+h3 {
+    width: 550px;
+    position: absolute;
+    top: 470px;
+    left: 65px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    color: white;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgb(31, 31, 31);
+}
+
+.btn-empezar {
+    font-size: 40px;
+    position: absolute;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(161, 195, 73);
+    padding: 20px 30px;
+    border-radius: 7px;
     margin: 0 auto;
+    box-shadow: 1px 7px 16px rgba(0, 0, 0, 0.6);
+    transition: background-color 1s ease-in-out; /* Suaviza la transición */
 }
 
-.dislexia {
-    background-color: green;    
+.btn-empezar:hover {
+    color: rgb(161, 195, 73);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 7px 16px rgba(255, 255, 255, 0.6);
 }
 
-.Discalculo {
-    background-color: violet;    
+/* ----------------------------------------- */
+
+.dislexia {  
+    overflow: auto;
+    position: relative;
+    background-image: url(../img/Letras-fondo.png);
+    background-size: cover;
+    background-position: center;
 }
+
+.dislexia::before {
+    content: '';
+    width: 100%;
+    height: 15vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(100% 100%, 0% 100% , 0.00% 43.38%, 1.67% 45.90%, 3.33% 48.61%, 5.00% 51.49%, 6.67% 54.50%, 8.33% 57.59%, 10.00% 60.72%, 11.67% 63.85%, 13.33% 66.95%, 15.00% 69.97%, 16.67% 72.86%, 18.33% 75.60%, 20.00% 78.15%, 21.67% 80.46%, 23.33% 82.52%, 25.00% 84.29%, 26.67% 85.75%, 28.33% 86.88%, 30.00% 87.66%, 31.67% 88.09%, 33.33% 88.17%, 35.00% 87.88%, 36.67% 87.23%, 38.33% 86.23%, 40.00% 84.90%, 41.67% 83.25%, 43.33% 81.30%, 45.00% 79.09%, 46.67% 76.63%, 48.33% 73.96%, 50.00% 71.13%, 51.67% 68.15%, 53.33% 65.08%, 55.00% 61.96%, 56.67% 58.82%, 58.33% 55.71%, 60.00% 52.66%, 61.67% 49.73%, 63.33% 46.94%, 65.00% 44.34%, 66.67% 41.96%, 68.33% 39.83%, 70.00% 37.98%, 71.67% 36.44%, 73.33% 35.22%, 75.00% 34.34%, 76.67% 33.81%, 78.33% 33.64%, 80.00% 33.83%, 81.67% 34.38%, 83.33% 35.28%, 85.00% 36.52%, 86.67% 38.09%, 88.33% 39.96%, 90.00% 42.10%, 91.67% 44.50%, 93.33% 47.11%, 95.00% 49.90%, 96.67% 52.84%, 98.33% 55.89%, 100.00% 59.01%);
+    background-color: rgb(161, 195, 73);
+}
+
+.dislexia-div {
+    position: relative;
+    float: left;
+}
+
+.cuadro-img {
+    position: relative;
+    float: right;
+}
+
+.recuadro--uno {
+    width: 460px;
+    height: 460px;
+    background-color: rgb(161, 195, 73);
+    border-radius: 63% 37% 44% 56% / 58% 41% 59% 42%;
+    rotate: 8deg;
+}
+
+.cuadro-img img {
+    position: absolute;
+    top: -23px;
+    width: 480px;
+    height: 480px;
+    padding: 30px;
+    border-radius: 63% 37% 44% 56% / 58% 41% 59% 42%;
+    z-index: 1;
+}
+
+.dislexia-h2 {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 70px 0;
+    line-height: 60px;
+    text-align: center;
+    color: rgb(161, 195, 73);
+}
+
+.dislexia-p {
+    position: absolute;
+    width: 460px;
+    height: 360px;
+    padding: 35px 25px 80px 30px;
+    font-size: 24px;
+    line-height: 30px;
+    color: white;
+    clip-path: polygon(2% 8%, 100% 1%, 94% 80%, 5% 91%);
+    background-color: rgb(161, 195, 73);
+    z-index: 3;
+}
+
+.p-recuadro {
+    position: absolute;
+    top: -17px;
+    left: -5px;
+    width: 485px;
+    height: 390px;
+    padding: 35px 25px 80px 30px;
+    clip-path: polygon(1% 11%, 99% 1%, 93% 79%, 4% 91%);
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+}
+
+.p-recuadro-2 {
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    width: 495px;
+    height: 400px;
+    padding: 35px 25px 80px 30px;
+    clip-path: polygon(0% 8%, 100% 1%, 94% 80%, 4% 91%);
+    background-color: rgb(161, 195, 73);
+    z-index: 1;
+}
+
+
+.btn-leer {
+    position: absolute;
+    top: 400px;
+    width: max-content;
+    margin-left: 40px;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(161, 195, 73);
+    padding: 20px 30px;
+    border-radius: 7px;
+    box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgb(161, 195, 73);
+    transition: background-color 1s ease-in-out; /* Suaviza la transición */
+}
+
+.btn-leer:hover {
+    color: rgb(161, 195, 73);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 5px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* ----------------------------------------- */
+
+.discalculo {
+    background-color: rgb(161, 195, 73);
+    background-image: url(../img/Letras-fondo-2.png);
+    overflow: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+.discalculo-div-dis {
+    position: relative;
+    float: right;
+}
+
+.cuadro-img-2 {
+    position: relative;
+    float: left;
+}
+
+.discalculo-h2 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    margin: 75px 0;
+}
+
+ .cuadro-img-2 img {
+    position: absolute;
+    top: 25px;
+    left: 22px;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 44% 56% 48% 52% / 45% 40% 60% 54%;
+ }
+
+.recuadro--dos {
+    width: 445px;
+    height: 445px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 63% 37% 44% 56% / 58% 41% 59% 42%;
+    rotate: 1deg;
+}
+
+.discalculo-p {
+    position: absolute;
+    top: 35px;
+    right: 0px;
+    width: 460px;
+    height: 360px;
+    padding: 35px 25px 80px 30px;
+    font-size: 24px;
+    line-height: 30px;
+    color: rgb(161, 195, 73);
+    clip-path: polygon(2% 8%, 100% 1%, 94% 80%, 5% 91%);
+    background-color: white;
+    z-index: 3;
+}
+
+.p-recuadro-discalculo {
+    position: absolute;
+    top: 13px;
+    right: -20px;
+    width: 485px;
+    height: 400px;
+    padding: 35px 25px 80px 30px;
+    clip-path: polygon(1% 11%, 99% 1%, 93% 79%, 4% 91%);
+    background-color: rgb(161, 195, 73);
+    z-index: 2;
+}
+
+.p-recuadro-2-discalculo {
+    position: absolute;
+    top: 6px;
+    right: -25px;
+    width: 495px;
+    height: 420px;
+    padding: 35px 25px 80px 30px;
+    clip-path: polygon(0% 8%, 100% 1%, 94% 80%, 4% 91%);
+    background-color: white;
+    z-index: 1;
+}
+
+
+.btn-discalculio {
+    position: absolute;
+    top: 450px;
+    right: 40px;
+    width: max-content;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 15px;
+    border-radius: 7px;
+    color: rgb(161, 195, 73);
+    font-size: 30px;
+    box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.4);
+    transition: background-color 1s ease-in-out; /* Suaviza la transición */
+    border: 1px solid white;
+}
+
+.btn-discalculio:hover {
+    color: white;
+    background-color: rgb(161, 195, 73);
+    box-shadow: 1px 5px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* --------------------------------- */
 
 .TDAH {
     background-color: yellow;    
@@ -71,4 +406,11 @@ h1 {
 .trucos {
     background-color: chocolate;
     height: 30vh;
+}
+
+/* ------------------------------------ */
+
+footer {
+    background-color: cadetblue;
+    height: 100px;
 }

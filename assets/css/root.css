@@ -13,6 +13,19 @@
 :root {
   --color-primario: #181818;
   --color-secundario: #f0f0f0;
+
+  --color-primary: #3498db;   
+  --color-secondary: #2ecc71; 
+  --color-accent: #e74c3c;    
+  --color-background: #ecf0f1;
+  --color-text: #2c3e50;      
+  --color-link: #2980b9;    
+
+  --color-white: #ececec;
+  --color-gray-light: #bdc3c7;
+  --color-gray: #95a5a6;
+  --color-black: #161616;
+  
   /* Tipografía */
   --tipo-principal: Helvetica, Arial, sans-serif;
   --tipo-secundaria: Verdana;
@@ -170,3 +183,5 @@ body {
   /* opcional */
   -moz-osx-font-smoothing: grayscale;
 }
+
+
